@@ -2,5 +2,9 @@
   "Dashboard-title": "Home",
   "Analytics-title": "Analytics",
   "Budget-title": "Budget",
-  "Profile-title": "Profile"
+  "Profile-title": "Profile",
+  "Dashboard-transfer-text": "Transfer",
+  "Dashboard-topUp-text": "Top Up",
+  "Dashboard-pay-text": "Pay",
+  "Dashboard-withdraw-text": "Withdraw"
 }
