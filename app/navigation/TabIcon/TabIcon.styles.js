@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { Fonts, Color } from '../../themes';
 
 export default StyleSheet.create({
@@ -6,7 +7,7 @@ export default StyleSheet.create({
     color: focused ? Color.primary : Color.brokenBlack
   }),
   text: (focused) => ({
-    fontFamily: focused ? Fonts.type.bold : Fonts.type.medium,
+    fontFamily: focused ? Fonts.type.bold : Fonts.type.base,
     fontSize: Fonts.size.small,
     color: focused ? Color.primary : Color.brokenBlack,
     textAlign: 'center',
@@ -20,6 +21,6 @@ export default StyleSheet.create({
     marginHorizontal: 4,
     paddingVertical: 12,
     alignItems: 'center',
-    backgroundColor: focused ? Color.transparentBorderFive : Color.white
+    backgroundColor: focused ? Color.transparentPrimaryPoint07 : Color.transparent
   }),
 });

@@ -105,6 +105,8 @@ const KeyboardStatus = {
   VISIBLE: 1
 };
 
+const DefaultPadding = 12
+
 export default {
   KeyboardStatus,
   ErrorCode,
@@ -118,5 +120,6 @@ export default {
   Widgets,
   DefaultPageLimit,
   BarStyle,
+  DefaultPadding,
   TextDecryptConfig
 };
