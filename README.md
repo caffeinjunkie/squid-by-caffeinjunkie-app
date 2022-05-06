@@ -1,4 +1,3 @@
 # Squid
 Simple money management app
-
-![Simulator Screen Shot - iPhone 11 - 2022-05-07 at 02 38 18](https://user-images.githubusercontent.com/104870883/167206266-33f805a9-28bd-47c7-b070-2fcc6f5d3300.png)
+![simulator_screenshot_EC6927D7-31D8-4142-9A76-43958148B0F4](https://user-images.githubusercontent.com/104870883/167206791-94f8645c-657b-42f2-9e1b-805bc1897336.png)
