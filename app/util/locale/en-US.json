@@ -1,10 +1,10 @@
 {
   "Dashboard-title": "Home",
-  "Analytics-title": "Analytics",
+  "Insight-title": "Insight",
   "Budget-title": "Budget",
   "Profile-title": "Profile",
   "Dashboard-transfer-text": "Transfer",
-  "Dashboard-topUp-text": "Top Up",
-  "Dashboard-pay-text": "Pay",
+  "Dashboard-addIncome-text": "Add Income",
+  "Dashboard-addExpenses-text": "Add Expenses",
   "Dashboard-withdraw-text": "Withdraw"
 }
