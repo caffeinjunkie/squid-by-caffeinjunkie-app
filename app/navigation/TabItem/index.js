@@ -1,1 +1,1 @@
-export { default as TabIcon } from './TabIcon.component';
+export { default as TabItem } from './TabItem';

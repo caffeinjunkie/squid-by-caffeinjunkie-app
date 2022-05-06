@@ -7,7 +7,7 @@ const shadow = {
     width: 0,
     height: 0,
   },
-  shadowColor: Color.black66opacity,
+  shadowColor: Color.AppTheme.shadow,
   shadowOpacity: 0.2,
   shadowRadius: 10,
   elevation: 4
@@ -18,9 +18,9 @@ export default StyleSheet.create({
     position: 'absolute',
     borderTopLeftRadius: 32,
     borderTopRightRadius: 32,
-    height: 104,
+    height: 96,
     paddingHorizontal: 4,
-    backgroundColor: Color.white,
+    backgroundColor: Color.AppTheme.background,
     ...shadow
   }
 });

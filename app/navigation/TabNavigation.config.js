@@ -3,14 +3,14 @@ import React from 'react';
 import { Dashboard } from '../screens/Dashboard';
 import { Ngens } from '../screens/Blank';
 
-const TabIconOptions = {
+const TabItemOptions = {
   DASHBOARD: {
     name: 'Dashboard',
     icon: 'home',
     component: Dashboard
   },
-  ANALYTICS: {
-    name: 'Analytics',
+  INSIGHT: {
+    name: 'Insight',
     icon: 'activity',
     component: Ngens
   },
@@ -27,5 +27,5 @@ const TabIconOptions = {
 }
 
 export default {
-  TabIconOptions
+  TabItemOptions
 }

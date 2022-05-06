@@ -2,33 +2,37 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import styles from './TabNavigation.styles';
-import { TabIcon } from './TabIcon';
+import { TabItem } from './TabItem';
 import config from './TabNavigation.config';
 
-const { TabIconOptions } = config;
+const { TabItemOptions } = config;
 
 const Tab = createBottomTabNavigator();
 
-const renderTabIcon = (key) => (
-  <Tab.Screen
-    key={key}
-    name={TabIconOptions[key].name}
-    component={TabIconOptions[key].component}
-    options={getTabIconOptions(TabIconOptions[key])}
-  />
-);
-
 const TabNavigation = () => {
+  const renderTabItem = (key) => (
+    <Tab.Screen
+      key={key}
+      name={TabItemOptions[key].name}
+      component={TabItemOptions[key].component}
+      options={getTabItemOptions(TabItemOptions[key])}
+    />
+  );
+  
   return (
     <Tab.Navigator tabBarOptions={tabBarOptions}>
-      {Object.keys(TabIconOptions).map((key) => renderTabIcon(key))}
+      {Object.keys(TabItemOptions).map(renderTabItem)}
     </Tab.Navigator>
   );
-};
+}
 
-const getTabIconOptions = (options) => ({
-  tabBarIcon: ({ focused }) => (
-    <TabIcon name={options.name} iconName={options.icon} focused={focused}/>
+const getTabItemOptions = (options) => ({
+  tabBarIcon: ({focused}) => (
+    <TabItem
+      name={options.name}
+      iconName={options.icon}
+      isFocused={focused}
+    />
   )
 });
 
