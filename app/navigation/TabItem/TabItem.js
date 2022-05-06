@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import { View, Text, Animated } from 'react-native';
+import { Feather as Icon } from '@expo/vector-icons';
 
 import i18n from '../../util/locale/i18n';
 import styles from './TabItem.styles';
@@ -11,27 +11,39 @@ const TabItem = (props) => {
     isFocused,
     iconName
   } = props;
-  
+  const scaleXAnimatedValue = React.useRef(new Animated.Value(0)).current;
+
+  React.useEffect(() => Animated.timing(scaleXAnimatedValue, {
+    toValue: 1,
+    duration: 1000
+  }).start(), [name]);
+
   const renderIcon = () => (
-    <Text>
-      <Icon
-        name={iconName}
-        size={24}
-        style={styles.icon(isFocused)}
-      />
+    <Icon
+      name={iconName}
+      size={24}
+      style={styles.icon(isFocused)}
+    />
+  );
+
+  const renderLine = () => (
+    <Animated.View style={styles.selectedLine(scaleXAnimatedValue)} />
+  );
+
+  const renderText = () => (
+    <Text style={styles.text(isFocused)}>
+      {i18n.t(`${name}-title`)}
     </Text>
   );
-  
+
   return (
-    <View style={styles.container(isFocused)}>
-      <View>
+    <View style={styles.container}>
+      <View style={styles.iconContainer}>
         {renderIcon()}
       </View>
-      <Text style={styles.text(isFocused)}>
-        {i18n.t(`${name}-title`)}
-      </Text>
+      {isFocused ? renderLine() : renderText()}
     </View>
   );
-}
+};
 
 export default TabItem;

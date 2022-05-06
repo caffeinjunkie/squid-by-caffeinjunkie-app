@@ -1,18 +1,32 @@
 import { StyleSheet } from 'react-native';
+import {
+  heightPercentageToDP as heightPercentage
+} from 'react-native-responsive-screen';
 
-import { Color, Fonts } from '../../../themes';
-import { isIphoneX } from '../../../util/PlatformUtil';
+import { Color, Fonts, Metrics } from '../../../themes';
 
 const imageContainerSize = 36;
+
+const shadow = {
+  shadowOffset: {
+    width: 0,
+    height: 4
+  },
+  shadowColor: Color.AppTheme.shadow,
+  shadowOpacity: 0.2,
+  shadowRadius: 4,
+  elevation: 4
+};
+
 
 export default StyleSheet.create({
   container: (animatedValue) => ({
     flexDirection: 'row',
     paddingBottom: 8,
-    backgroundColor: Color.AppTheme.background,
     marginHorizontal: -14,
     zIndex: 2,
-    paddingTop: isIphoneX ? 64 : 48,
+    backgroundColor: Color.AppTheme.background,
+    paddingTop: Metrics.navBarHeightWithoutStatusBar,
     paddingHorizontal: 18,
     transform: [{ translateY: animatedValue }]
   }),
@@ -34,18 +48,33 @@ export default StyleSheet.create({
   greetingsText: {
     ...Fonts.style.normalMedium,
     color: Color.AppTheme.textLight,
-    marginBottom: 4,
+    marginBottom: 4
   },
   greetingsName: {
     ...Fonts.style.largeSemiBold,
     color: Color.AppTheme.textDark
   },
-  nameText: (animatedValue) => ({
+  nameContainer: (animatedValue, opacityValue) => ({
+    position: 'absolute',
+    backgroundColor: Color.AppTheme.background,
+    zIndex: 1,
+    height: heightPercentage(7),
+    top: -56,
+    opacity: opacityValue,
+    marginHorizontal: -14,
+    left: 0,
+    right: 0,
+    justifyContent: 'flex-end',
+    paddingBottom: heightPercentage(1.5),
+    transform: [{ translateY: animatedValue }],
+    ...shadow
+  }),
+  nameText: {
     ...Fonts.style.headerName,
     color: Color.AppTheme.textDark,
     paddingLeft: 8,
     alignSelf: 'center',
-    overflow: 'hidden',
-    transform: [{ translateY: animatedValue }],
-  })
+    textAlign: 'center',
+    overflow: 'hidden'
+  }
 });

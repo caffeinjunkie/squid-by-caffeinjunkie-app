@@ -105,7 +105,7 @@ const KeyboardStatus = {
   VISIBLE: 1
 };
 
-const DefaultPadding = 14
+const DefaultPadding = 14;
 
 export default {
   KeyboardStatus,

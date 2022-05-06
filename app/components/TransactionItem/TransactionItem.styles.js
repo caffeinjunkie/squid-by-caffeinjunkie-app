@@ -14,7 +14,7 @@ export default StyleSheet.create({
     width: imageContainerSize,
     alignSelf: 'center',
     borderRadius: imageContainerSize / 2,
-    backgroundColor: Color.grayContainer,
+    backgroundColor: Color.grayContainer
   },
   infoContainer: {
     marginLeft: 12,

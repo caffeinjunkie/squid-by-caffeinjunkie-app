@@ -1,12 +1,15 @@
 import { StyleSheet } from 'react-native';
+import {
+  heightPercentageToDP as heightPercentage
+} from 'react-native-responsive-screen';
 
 import { Fonts, Color } from '../../../themes';
 
 export default StyleSheet.create({
   container: {
     paddingHorizontal: 4,
-    paddingTop: 8,
-    paddingBottom: 100
+    paddingTop: heightPercentage(2),
+    paddingBottom: heightPercentage(11)
   },
   header: {
     flexDirection: 'row',

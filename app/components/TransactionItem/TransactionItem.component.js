@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import {
+  View, Text, Image, TouchableOpacity
+} from 'react-native';
 
 import styles from './TransactionItem.styles';
 
@@ -7,7 +9,7 @@ const TransactionItem = () => {
   const renderIcon = () => (
     <View style={styles.imageContainer} />
   );
-  
+
   const renderInfo = () => (
     <View style={styles.infoContainer}>
       <Text
@@ -19,7 +21,7 @@ const TransactionItem = () => {
       <Text style={styles.timeText}>10 Oct, 10:00 AM</Text>
     </View>
   );
-  
+
   const renderAmount = () => (
     <Text
       adjustsFontSizeToFit
@@ -29,14 +31,14 @@ const TransactionItem = () => {
       -Rp 69,000
     </Text>
   );
-  
+
   return (
     <TouchableOpacity style={styles.container}>
       {renderIcon()}
       {renderInfo()}
       {renderAmount()}
     </TouchableOpacity>
-  )
+  );
 };
 
 export default TransactionItem;

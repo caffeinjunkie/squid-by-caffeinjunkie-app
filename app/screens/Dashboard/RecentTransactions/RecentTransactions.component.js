@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './RecentTransactions.styles';
-import { TransactionItem } from '../../../components/TransactionItem/';
+import { TransactionItem } from '../../../components/TransactionItem';
 
 const RecentTransactions = () => {
   const renderHeader = () => (
@@ -14,7 +14,7 @@ const RecentTransactions = () => {
         </Text>
       </TouchableOpacity>
     </View>
-    
+
   );
 
   return (
@@ -26,7 +26,7 @@ const RecentTransactions = () => {
       <TransactionItem />
       <TransactionItem />
     </View>
-  )
+  );
 };
 
 export default RecentTransactions;

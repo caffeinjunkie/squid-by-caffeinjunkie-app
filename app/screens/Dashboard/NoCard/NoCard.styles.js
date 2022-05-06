@@ -21,9 +21,8 @@ export default StyleSheet.create({
   },
   container: (animatedValue) => ({
     height: 200,
-    marginVertical: 12,
     alignItems: 'center',
     justifyContent: 'center',
     transform: [{ translateY: animatedValue }]
-  }),
+  })
 });

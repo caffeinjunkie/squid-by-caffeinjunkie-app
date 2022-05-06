@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Dashboard } from '../screens/Dashboard';
 import { Ngens } from '../screens/Blank';
 
@@ -24,8 +22,8 @@ const TabItemOptions = {
     icon: 'user',
     component: Ngens
   }
-}
+};
 
 export default {
   TabItemOptions
-}
+};

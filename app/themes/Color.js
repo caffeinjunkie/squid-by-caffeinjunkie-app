@@ -1,18 +1,19 @@
+/* no-unused-var */
 const darkThemeColor = {
   textDark: '#FFFFFF',
   textLight: '#FFFFFF',
   tabItem: '#FFFFFF',
   background: 'rgb(24,24,24)',
-  shadow: '#FFFFFF66',
-}
+  shadow: '#FFFFFF66'
+};
 
 const lightThemeColor = {
   textLight: '#a3a3a3',
   textDark: 'rgb(37,44,41)',
   tabItem: '#646464',
   background: '#ffffff',
-  shadow: '#00000066',
-}
+  shadow: '#00000066'
+};
 
 const color = {
   primary: '#e1851e',

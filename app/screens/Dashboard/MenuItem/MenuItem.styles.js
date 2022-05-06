@@ -4,15 +4,15 @@ import { Fonts, Color } from '../../../themes';
 
 export default StyleSheet.create({
   icon: (backgroundColor) => ({
-    backgroundColor: backgroundColor
+    backgroundColor
   }),
   iconContainer: (backgroundColor) => ({
-    backgroundColor: backgroundColor,
+    backgroundColor,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     height: 78,
-    borderRadius: 20,
+    borderRadius: 20
   }),
   text: {
     fontFamily: Fonts.type.medium,
@@ -32,5 +32,5 @@ export default StyleSheet.create({
     paddingTop: 8,
     paddingBottom: 12,
     alignItems: 'center'
-  },
+  }
 });

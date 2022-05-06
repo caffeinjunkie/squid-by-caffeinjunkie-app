@@ -1,31 +1,35 @@
 import { StyleSheet } from 'react-native';
 
-import { Fonts, Color } from '../../themes';
+import { Fonts, Color, Metrics } from '../../themes';
 
 export default StyleSheet.create({
   icon: (focused) => ({
     color: focused ? Color.primary : Color.AppTheme.tabItem
   }),
+  iconContainer: {
+    marginBottom: 6
+  },
   text: (focused) => ({
     fontFamily: focused ? Fonts.type.semiBold : Fonts.type.base,
     fontSize: Fonts.size.small,
     color: focused ? Color.primary : Color.AppTheme.tabItem,
-    textAlign: 'center',
-    marginTop: 6
+    textAlign: 'center'
   }),
-  animation: (animation) => ({
-    width: animation,
-    height: animation
+  selectedLine: (animatedValue) => ({
+    height: 4,
+    marginVertical: 4,
+    width: 12,
+    borderRadius: 2,
+    backgroundColor: Color.primary,
+    transform: [{ scaleX: animatedValue }]
   }),
-  container: (focused, fadeAnim) => ({
+  container: {
     alignSelf: 'stretch',
     justifyContent: 'center',
     borderRadius: 24,
-    marginTop: 11,
-    opacity: fadeAnim,
+    marginTop: Metrics.bottomBarMarginTop,
     marginHorizontal: 4,
     paddingVertical: 12,
-    alignItems: 'center',
-    backgroundColor: focused ? Color.transparentPrimaryPoint07 : Color.transparent
-  }),
+    alignItems: 'center'
+  }
 });

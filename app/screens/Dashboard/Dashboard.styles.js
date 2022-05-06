@@ -7,6 +7,7 @@ const { DefaultPadding } = constants;
 
 export default StyleSheet.create({
   container: {
+    flex: 1,
     paddingHorizontal: DefaultPadding,
     backgroundColor: Color.AppTheme.background
   }

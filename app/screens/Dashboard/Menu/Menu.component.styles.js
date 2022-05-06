@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import {Color} from "../../../themes";
+import {heightPercentageToDP as heightPercentage} from "react-native-responsive-screen";
 
 export default StyleSheet.create({
   container: {

@@ -99,8 +99,16 @@ const Metrics = {
     android: StatusBar.currentHeight + 40
   }),
   navBarHeightWithoutStatusBar: Platform.select({
-    ios: (isIphoneX && isIphoneX()) ? 62 : 50,
+    ios: (isIphoneX && isIphoneX()) ? 64 : 50,
     android: 80
+  }),
+  bottomBarMarginTop: Platform.select({
+    ios: (isIphoneX && isIphoneX()) ? 11 : 0,
+    android: 11
+  }),
+  bottomBarBorderRadius: Platform.select({
+    ios: (isIphoneX && isIphoneX()) ? 32 : 0,
+    android: 32
   }),
   buttonRadius: 4,
   tutorialRadius: 5,

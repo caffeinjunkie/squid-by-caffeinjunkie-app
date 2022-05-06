@@ -83,7 +83,7 @@ const style = {
   mediumRegular: {
     fontFamily: type.medium,
     fontSize: size.medium
-    
+
   },
   mediumBold: {
     fontFamily: type.bold,

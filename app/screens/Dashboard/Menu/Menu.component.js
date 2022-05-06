@@ -19,7 +19,7 @@ const Menu = (props) => {
         />
       ))}
     </View>
-  )
+  );
 };
 
 export default Menu;

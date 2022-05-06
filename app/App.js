@@ -32,16 +32,13 @@ setCustomTextInput(customTextInputProps);
 
 I18n.locale = ID.language;
 
-const App = () => {
-  
-  return (
-    <MenuProvider customStyles={menuContext}>
-      <NavigationContainer>
-        <TabNavigation/>
-      </NavigationContainer>
-    </MenuProvider>
-  );
-};
+const App = () => (
+  <MenuProvider customStyles={menuContext}>
+    <NavigationContainer>
+      <TabNavigation />
+    </NavigationContainer>
+  </MenuProvider>
+);
 
 const menuContext = {
   backdrop: {

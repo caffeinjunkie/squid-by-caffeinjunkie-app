@@ -25,8 +25,8 @@ const MenuOptions = {
     color: Color.primary,
     backgroundColor: Color.transparentPrimaryPoint1
   }
-}
+};
 
 export default {
   MenuOptions
-}
+};
