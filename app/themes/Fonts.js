@@ -1,8 +1,9 @@
 const type = {
-  base: 'HelveticaNeue',
-  bold: 'HelveticaNeue-Bold',
-  light: 'HelveticaNeue-Light',
-  medium: 'HelveticaNeue-Medium'
+  base: 'Gilroy-Regular',
+  bold: 'Gilroy-Bold',
+  semiBold: 'Gilroy-SemiBold',
+  light: 'Gilroy-Light',
+  medium: 'Gilroy-Medium'
 };
 
 const size = {
@@ -47,8 +48,16 @@ const style = {
     fontFamily: type.base,
     fontSize: size.regular
   },
+  normalMedium: {
+    fontFamily: type.medium,
+    fontSize: size.regular
+  },
   normalBold: {
     fontFamily: type.bold,
+    fontSize: size.regular
+  },
+  normalSemiBold: {
+    fontFamily: type.semiBold,
     fontSize: size.regular
   },
   button: {
@@ -73,10 +82,15 @@ const style = {
   },
   mediumRegular: {
     fontFamily: type.medium,
-    fontSize: size.regular
+    fontSize: size.medium
+    
   },
   mediumBold: {
     fontFamily: type.bold,
+    fontSize: size.medium
+  },
+  mediumSemiBold: {
+    fontFamily: type.semiBold,
     fontSize: size.medium
   },
   small: {
@@ -95,6 +109,10 @@ const style = {
     fontFamily: type.light,
     fontSize: size.smaller
   },
+  smallerSemiBold: {
+    fontFamily: type.semiBold,
+    fontSize: size.smaller
+  },
   tinyBold: {
     fontFamily: type.bold,
     fontSize: size.tiny
@@ -109,15 +127,19 @@ const style = {
   },
   large: {
     fontFamily: type.light,
-    fontSize: size.large
+    fontSize: size.largeInput
   },
   largeBold: {
     fontFamily: type.bold,
-    fontSize: size.largeAmount
+    fontSize: size.largeInput
+  },
+  largeSemiBold: {
+    fontFamily: type.semiBold,
+    fontSize: size.largeInput
   },
   largeLight: {
     fontFamily: type.light,
-    fontSize: size.largeAmount
+    fontSize: size.largeInput
   },
   boldExtraLarge: {
     fontFamily: type.bold,
@@ -131,6 +153,18 @@ const style = {
   regularMediumBold: {
     fontFamily: type.bold,
     fontSize: size.regular_medium
+  },
+  h2Bold: {
+    fontFamily: type.bold,
+    fontSize: size.h2
+  },
+  section: {
+    fontFamily: type.bold,
+    fontSize: size.input
+  },
+  headerName: {
+    fontFamily: type.semiBold,
+    fontSize: size.input
   }
 };
 

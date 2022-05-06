@@ -1,3 +1,19 @@
+const darkThemeColor = {
+  textDark: '#FFFFFF',
+  textLight: '#FFFFFF',
+  tabItem: '#FFFFFF',
+  background: 'rgb(24,24,24)',
+  shadow: '#FFFFFF66',
+}
+
+const lightThemeColor = {
+  textLight: '#a3a3a3',
+  textDark: 'rgb(37,44,41)',
+  tabItem: '#646464',
+  background: '#ffffff',
+  shadow: '#00000066',
+}
+
 const color = {
   primary: '#e1851e',
   secondary: '#1E7AE1',
@@ -48,7 +64,8 @@ const color = {
   subtitleGray: '#a3a3a3',
   lighterGreen: 'rgba(206,215,210,0.5)',
   notificationGreen: 'rgba(237, 243, 237, 1.0)',
-  grayContainer: 'rgb(242,242,242)'
+  grayContainer: 'rgb(242,242,242)',
+  AppTheme: lightThemeColor
 };
 
 export default color;
