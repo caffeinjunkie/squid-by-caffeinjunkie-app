@@ -1,4 +1,7 @@
 import { StyleSheet } from 'react-native';
+import {
+  heightPercentageToDP as heightPercentage
+} from 'react-native-responsive-screen';
 
 import { Fonts, Color } from '../../../themes';
 
@@ -20,7 +23,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   container: (animatedValue) => ({
-    height: 200,
+    height: heightPercentage(25),
     alignItems: 'center',
     justifyContent: 'center',
     transform: [{ translateY: animatedValue }]

@@ -21,6 +21,7 @@ export default StyleSheet.create({
     position: 'absolute',
     borderTopLeftRadius: Metrics.bottomBarBorderRadius,
     borderTopRightRadius: Metrics.bottomBarBorderRadius,
+    borderTopWidth: 0,
     height: heightPercentage(11),
     paddingHorizontal: 4,
     backgroundColor: Color.AppTheme.background,

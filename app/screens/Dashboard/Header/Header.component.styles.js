@@ -34,6 +34,8 @@ export default StyleSheet.create({
     height: imageContainerSize,
     width: imageContainerSize,
     alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: imageContainerSize / 2,
     backgroundColor: Color.grayContainer,
     transform: [{
@@ -45,6 +47,11 @@ export default StyleSheet.create({
     transform: [{ translateY: animatedValue }],
     overflow: 'hidden'
   }),
+  nameInitial: {
+    ...Fonts.style.medium,
+    paddingTop: 3,
+    color: Color.darkerGray
+  },
   greetingsText: {
     ...Fonts.style.normalMedium,
     color: Color.AppTheme.textLight,
@@ -54,19 +61,18 @@ export default StyleSheet.create({
     ...Fonts.style.largeSemiBold,
     color: Color.AppTheme.textDark
   },
-  nameContainer: (animatedValue, opacityValue) => ({
+  nameContainer: (opacityValue) => ({
     position: 'absolute',
     backgroundColor: Color.AppTheme.background,
     zIndex: 1,
-    height: heightPercentage(7),
-    top: -56,
+    height: 180,
+    top: 0,
     opacity: opacityValue,
     marginHorizontal: -14,
     left: 0,
     right: 0,
     justifyContent: 'flex-end',
     paddingBottom: heightPercentage(1.5),
-    transform: [{ translateY: animatedValue }],
     ...shadow
   }),
   nameText: {

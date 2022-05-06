@@ -20,7 +20,13 @@ const BalanceCard = (props) => {
     <Animated.View style={styles.container}>
       <Text style={styles.text}>SAVINGS</Text>
       <View style={styles.amountContainer}>
-        <Text style={styles.amountText}>Rp 12,200,800,000</Text>
+        <Text
+          adjustsFontSizeToFit
+          numberOfLines={1}
+          style={styles.amountText}
+        >
+          $ 849.27
+        </Text>
         <Text style={styles.balanceText}>Current Balance</Text>
       </View>
       <Text style={styles.balanceTrendText}>

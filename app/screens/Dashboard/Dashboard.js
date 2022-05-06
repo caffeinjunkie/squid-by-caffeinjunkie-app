@@ -8,12 +8,14 @@ import { Header } from './Header';
 import { BalanceCard } from '../../components/BalanceCard';
 import { RecentTransactions } from './RecentTransactions';
 import { NoCard } from './NoCard';
+import fixtures from './Dashboard.fixture';
 
 const { SCREEN_NAME } = config;
+const { transactions } = fixtures;
 
 const Dashboard = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const hasCards = false;
+  const hasCards = true;
 
   return (
     <ScrollView
@@ -22,10 +24,10 @@ const Dashboard = () => {
       style={styles.container}
       onMomentumScrollEnd={(event) => setIsScrolled(event.nativeEvent.contentOffset.y !== 0)}
     >
-      <Header isScrolled={isScrolled} hasCards={hasCards}/>
+      <Header isScrolled={isScrolled} />
       {hasCards ? <BalanceCard isScrolled={isScrolled} /> : <NoCard isScrolled={isScrolled} />}
       <Menu screenName={SCREEN_NAME} />
-      <RecentTransactions />
+      <RecentTransactions transactions={transactions} />
     </ScrollView>
   );
 };

@@ -4,7 +4,9 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './RecentTransactions.styles';
 import { TransactionItem } from '../../../components/TransactionItem';
 
-const RecentTransactions = () => {
+const RecentTransactions = (props) => {
+  const { transactions } = props;
+
   const renderHeader = () => (
     <View style={styles.header}>
       <Text style={styles.text}>Recent Transactions</Text>
@@ -20,11 +22,7 @@ const RecentTransactions = () => {
   return (
     <View style={styles.container}>
       {renderHeader()}
-      <TransactionItem />
-      <TransactionItem />
-      <TransactionItem />
-      <TransactionItem />
-      <TransactionItem />
+      {transactions.map((transaction) => <TransactionItem key={transaction.id} transaction={transaction} />)}
     </View>
   );
 };

@@ -9,13 +9,17 @@ export default StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 14
   },
-  imageContainer: {
+  imageContainer: (backgroundColor) => ({
     height: imageContainerSize,
     width: imageContainerSize,
     alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: imageContainerSize / 2,
-    backgroundColor: Color.grayContainer
-  },
+    borderWidth: 1,
+    borderColor: Color.grayContainer,
+    backgroundColor: backgroundColor
+  }),
   infoContainer: {
     marginLeft: 12,
     maxWidth: '45%',
@@ -31,12 +35,12 @@ export default StyleSheet.create({
     marginVertical: 3,
     color: Color.AppTheme.textLight
   },
-  amountText: {
+  amountText: (type) => ({
     flex: 1,
     ...Fonts.style.mediumRegular,
-    color: Color.lightRed,
+    color: type === 'INCOME' ? Color.darkerGreen : Color.lightRed,
     marginLeft: 8,
     textAlign: 'right',
     alignSelf: 'center'
-  }
+  })
 });

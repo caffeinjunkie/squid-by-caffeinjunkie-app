@@ -1,13 +1,23 @@
 import React from 'react';
 import {
-  View, Text, Image, TouchableOpacity
+  View, Text, TouchableOpacity
 } from 'react-native';
+import { MaterialCommunityIcons as Icon } from '@expo/vector-icons';
 
 import styles from './TransactionItem.styles';
 
-const TransactionItem = () => {
+const TransactionItem = (props) => {
+  const { transaction } = props;
+  const { icon, description, amount, date, type } = transaction;
+  
   const renderIcon = () => (
-    <View style={styles.imageContainer} />
+    <View style={styles.imageContainer(icon.backgroundColor)}>
+      <Icon
+        name={icon.name}
+        size={24}
+        color={icon.color}
+      />
+    </View>
   );
 
   const renderInfo = () => (
@@ -16,9 +26,9 @@ const TransactionItem = () => {
         numberOfLines={2}
         style={styles.descriptionText}
       >
-        Beli Kondom
+        {description}
       </Text>
-      <Text style={styles.timeText}>10 Oct, 10:00 AM</Text>
+      <Text style={styles.timeText}>{date}</Text>
     </View>
   );
 
@@ -26,9 +36,9 @@ const TransactionItem = () => {
     <Text
       adjustsFontSizeToFit
       numberOfLines={1}
-      style={styles.amountText}
+      style={styles.amountText(type)}
     >
-      -Rp 69,000
+      {amount}
     </Text>
   );
 
