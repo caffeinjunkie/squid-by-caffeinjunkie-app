@@ -17,14 +17,18 @@ export default StyleSheet.create({
   text: {
     fontFamily: Fonts.type.medium,
     fontSize: Fonts.size.small_regular,
-    color: Color.brokenBlack,
+    color: Color.LightTheme.textDark,
     textAlign: 'center',
-    marginTop: 4
+    marginTop: 8
   },
   container: {
+    flex: 1,
+    flexDirection: 'column',
     alignSelf: 'stretch',
-    marginTop: 8,
-    marginHorizontal: 4,
+    marginTop: 9,
+    borderRadius: 12,
+    marginHorizontal: 2,
+    width: '25%',
     paddingVertical: 12,
     alignItems: 'center'
   },
