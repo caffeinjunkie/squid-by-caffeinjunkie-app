@@ -9,7 +9,7 @@ const { useSpring } = hooks;
 const NoCard = (props) => {
   const { isScrolled } = props;
   const animation = useSpring({ to: isScrolled ? 1 : 0 }, { stiffness: 50 });
-  const animatedContainerYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, 64] });
+  const animatedContainerYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, 36] });
   
   return (
     <Animated.View style={styles.container(animatedContainerYValue)}>

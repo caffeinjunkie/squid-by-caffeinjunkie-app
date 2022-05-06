@@ -13,7 +13,7 @@ const { SCREEN_NAME } = config;
 
 const Dashboard = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const hasCards = true;
+  const hasCards = false;
   
   return (
     <ScrollView

@@ -9,7 +9,7 @@ const { useSpring } = hooks;
 const Header = (props) => {
   const { isScrolled } = props;
   const animation = useSpring({ to: isScrolled ? 1 : 0 }, { stiffness: 50 });
-  const animatedContainerYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, 130] });
+  const animatedContainerYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, 80] });
   const animatedGreetingsYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, 80] });
   const animatedNameYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [-40, 0] });
   const animatedImageSizeValue = animation.interpolate({ inputRange: [0, 1], outputRange: [1, 0.75] });

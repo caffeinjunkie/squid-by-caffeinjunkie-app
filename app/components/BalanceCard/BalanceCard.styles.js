@@ -36,15 +36,6 @@ export default StyleSheet.create({
     color: Color.white,
     textAlign: 'center'
   },
-  amountSmallText: {
-    ...Fonts.style.largeBold,
-    marginTop: 6,
-    color: Color.white
-  },
-  balanceSmallText: {
-    ...Fonts.style.small,
-    color: Color.white
-  },
   balanceTrendText: {
     ...Fonts.style.smallerSemiBold,
     color: Color.white,
@@ -63,19 +54,32 @@ export default StyleSheet.create({
   smallContainer: (animatedValue) => ({
     height: 200,
     marginVertical: 12,
-    marginHorizontal: 4
+    marginHorizontal: 4,
+    transform: [{ translateY: animatedValue }],
   }),
   smallCard: {
     borderRadius: 28,
-    marginTop: 128,
-    height: 84,
+    marginTop: 68,
+    height: 132,
     paddingHorizontal: 24,
     backgroundColor: Color.quaternary,
     ...shadow
   },
+  amountSmallText: {
+    ...Fonts.style.largeBold,
+    marginTop: 6,
+    color: Color.white
+  },
+  balanceSmallText: {
+    ...Fonts.style.small,
+    color: Color.white
+  },
   balanceTrendSmallText: {
-    ...Fonts.style.largeSemiBold,
+    position: 'absolute',
+    ...Fonts.style.section,
     color: Color.white,
+    right: 12,
+    bottom: 12,
     textAlign: 'right'
   },
 });

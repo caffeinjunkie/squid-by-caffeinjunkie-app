@@ -9,11 +9,13 @@ const { useSpring } = hooks;
 
 const BalanceCard = (props) => {
   const { isScrolled } = props;
-  const animation = useSpring({ to: isScrolled ? 1 : 0 }, { stiffness: 10 });
-  const animatedContainerYValue = animation.interpolate({ inputRange: [0, 1], outputRange: [0, -600] });
+  const firstAnimation = useSpring({ to: isScrolled ? 1 : 0 }, { stiffness: 10 });
+  const secondAnimation = useSpring({ to: isScrolled ? 1 : 0 }, { stiffness: 25 });
+  const animatedBigYValue = firstAnimation.interpolate({ inputRange: [0, 1], outputRange: [0, -600] });
+  const animatedSmallYValue = secondAnimation.interpolate({ inputRange: [0, 1], outputRange: [-200, 0] });
   
   const renderBigBalanceCard = () => (
-    <Animated.View style={styles.container(animatedContainerYValue)}>
+    <Animated.View style={styles.container(animatedBigYValue)}>
       <Text style={styles.text}>SAVINGS</Text>
       <View style={styles.amountContainer}>
         <Text style={styles.amountText}>Rp 12,200,800,000</Text>
@@ -32,8 +34,8 @@ const BalanceCard = (props) => {
   );
   
   const renderSmallBalanceCard = () => (
-    <View style={styles.smallContainer(animatedContainerYValue)}>
-      <Animated.View style={styles.smallCard}>
+    <Animated.View style={styles.smallContainer(animatedSmallYValue)}>
+      <View style={styles.smallCard}>
         <View style={styles.amountContainer}>
           <Text style={styles.balanceSmallText}>Balance</Text>
           <Text style={styles.amountSmallText}>Rp 12,200,800,000</Text>
@@ -47,8 +49,8 @@ const BalanceCard = (props) => {
           {' '}
           24%
         </Text>
-      </Animated.View>
-    </View>
+      </View>
+    </Animated.View>
   );
   
   return (
