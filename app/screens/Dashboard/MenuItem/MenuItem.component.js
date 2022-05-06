@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import i18n from '../../util/locale/i18n';
-import styles from './MenuIcon.styles';
+import i18n from '../../../util/locale/i18n';
+import styles from './MenuItem.styles';
 
-const MenuIcon = (props) => {
+const MenuItem = (props) => {
   const {
     screenName,
     name,
@@ -31,4 +31,4 @@ const MenuIcon = (props) => {
   );
 }
 
-export default MenuIcon;
+export default MenuItem;

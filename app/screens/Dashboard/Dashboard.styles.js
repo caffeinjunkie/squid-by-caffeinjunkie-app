@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 import constants from '../../constants';
+import { Color } from '../../themes';
 
 const { DefaultPadding } = constants;
 
 export default StyleSheet.create({
-  menuContainer: {
+  container: {
     paddingHorizontal: DefaultPadding,
-    flexDirection: 'row',
-    justifyContent: 'space-around'
+    backgroundColor: Color.AppTheme.background
   }
 });

@@ -1,1 +1,1 @@
-export { default as MenuIcon } from './MenuIcon.component';
+export { default as MenuItem } from './MenuItem.component';
